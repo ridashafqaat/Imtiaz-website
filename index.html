@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment-Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img class="starting-logo default-logo" alt="Imtiaz"
+          src="https://imtiaz.com.pk/wp-content/uploads/2021/02/imtiaz-3.png"
+          srcset="https://imtiaz.com.pk/wp-content/uploads/2021/02/imtiaz-3.png 1x, https://imtiaz.com.pk/wp-content/uploads/2021/02/imtiazwhite-3.png 2x">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mt-3" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link active " aria-current="page" href="#">About Us</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Our Brands</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Benefits
+            </a>
+            <ul class="dropdown-menu dropdownn">
+              <li><a class="dropdown-item" href="#">Loyalty Program</a></li>
+              <li><a class="dropdown-item" href="#">Gift Cards</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Return & Exchange Policies</a>
+          </li>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" (click)="openmodel()" data-bs-toggle="modal"
+            data-bs-target="#myModal">
+            021 111 648 429 (IMTIAZ)
+          </button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner bggg-1">
+        <div class="carousel-item active">
+          <img src="https://imtiaz.com.pk/wp-content/uploads/2023/02/website-3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://imtiaz.com.pk/wp-content/uploads/2023/04/web.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://imtiaz.com.pk/wp-content/uploads/2023/09/final-kv-coffee-1920x1080-1.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+  </section><br>
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Open Pick an app?</h5>
+          <button type="button" class="btn-close" (click)="closemodel()" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          https://imtiaz.com.pk wants to open this application.
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1"> Always allow imtiaz.com.pk to open links of this type in
+            the associated app</label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Open Pick an app</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about us">
+    <div class="container-1">
+      <h1 class="text-center fw-bold display-2 swiper-h1 mb-3">About Us</h1>
+      <p class="para-1">Imtiaz is the pioneer in the retail industry of Pakistan, providing an ultimate shopping
+        experience to its consumers.</p>
+      <button class="button-one ">READ MORE</button>
+
+  </section>
+
+  <div class="main-container-3">
+    <div class="single-team">
+      <img src="https://imtiaz.com.pk/wp-content/uploads/2021/02/1-scaled.jpg" class="img-4">
+      <div class="team-text">
+        <p>
+          <a href="#"><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABSNJREFUaEPtmHnIp1MUxz9jH/u+Zx1L/GEXxlooa5hBdkbIkqXEKAbZZZfIlpI9SwxiIvsuZpSyjD37Fsa+9ZnunW7Xsz/vm976nXrr/T3PPec56/ecc0cxwmnUCNefgQH/dwQHERhEoKcHBinU04G92QcRSFy4KLARsB6wBLAwsEh4/x3wPfAV8BrwMvBtb/dD70a2MbAvsBMwpqVC7wKTgduAl1ryzjreJYXmBY4CjuigdJmeGnMNcDXwcxtj2hgwF3AwcAawTJuPtDhril0MXAH80oSvqQFbAzcAqzQQ+gVwK/A48DGwAnA7YOSa0nvABODJOoY6A+YDzgeOblAv/wAXAGcDM7IPPw1sXqdM9v5v4CrglAJ5jWpgReBBYO1M8CfAp4AFHOkv4IBQkPGZSLRmQCYNm6PGAAt5WWD57NwbwM7AR0X8ZRHYEHgAWDph+h24FLgceDPAZHx9Yshdf5syntkVmK2F14VanXU8cAIwZ8L7GbAL8Gour8gA8114M30i6fXdgVeAg4CbknevAxsAhlwoNV1Sw1vYwIHAzSG69wDLJcym5Y7AU6nA3IB1QuEslBx6BhgPWJzSHcBeyfv9gVuCtzXQRtaVLPZ9ArNOuBvYLBFmM9wKmBafpQasDDybQeT9wJ6A6RPpnQT/LdzFAMO/HfBoV80D39vAGokMoVsjrIFI1t9Y4AMfRAPMt+dDKsSDjwXGXzOlfgTmD8++ARYP/58eekQfG5S9YCZgHuAhYJvkuZE2Mn9EA84CTk0OvAhsC/xUoI0GzR2efxkiZv5bF9ZHH/oNUOGcFgB0qLNWJHWepAGbhMKLMOeQtW5oQkXK2JxSqLsLeD+ghyHvQ7HxFckQ3QSMOCD+CWyhAVOCtyOTaHNfhRZGJ+0BfRTOeV8ANq0QqG6iU6QpGmCaRMgUTUSVKrIpnTSUWiey7Pp23ipSRydgaYYGTE9mHKFSKI2QWSTIkUCsHw4SXZ6rECy0mkZLhTPTNeDkMO9EvkeAHQAhsojk8SPWzlCSMnVO2Xft6g8D2ycfnagyQqj4n1a4I/OZFdpt2WRSbGGdSivTpllG6iRUR3KrGxthdNUQmojvHjoWuLJC4HnAxBZKVh09J4Px/KzLkwtPJJee9YG30k58KHB9csgJ02K5s+TLhlQI3aOnEXZaRxN7SRHtHUaV2ZOX6nqjv/NZyLSZlBw0tHr5whLhCtV71lEXuhY4xo5awnwccEk21aqj6TSTiqZRhR6WCbwsQGfZh4yUKWWzaUIfBsc4vBWRdXlRSOP0/XXA4emDIgP0qvO8W1hKzuKOu+4CReQIcEhIKQsy78oOhK6INiLHjnzGijLXCiO1OZ6SNWC0TO1ZVLVSulTohXQp8aPOIBqYr42pXI1xo3Mrk5yZ3KjKlPaMzdSUOS2bh6wNG6fL/n+obid2C7Kwl8w4Pw8pY0gb3R6URM3Ho0Na2IFjg4rHvwYsWMf6QqozQCa96HLtXpDTD2Fet727KZXVSM5njruY7BdSLh+hPX8vcGTNVNDqZm4ccC6weokzTI+p4drQZcMlxz/JCdKrx5UA923HlaKx2bNecjnau/nVUpMIpEKsBw0ROlerld7ugMikg8R3R+VG1NaAKNTdwRXS/XU3wIWjC7mBObp7P+pY31jx+LGuBqTKWoTeZDhLmR7Cn3VTBKOikbfTroTOMk/0BYGhMKDM88Jier1eBbtdojeTZzgN6KxUG8aBAW28NRxnBxEYDq+2kTniI/AvPZ7wb8odNCgAAAAASUVORK5CYII="
+              alt=""></a>
+        </p><br>
+        <h3 class="vision">Our Vision</h3><br><br>
+        <p>To be recognized as the best value provider ever.</p>
+      </div>
+    </div>
+
+    <div class="single-team">
+      <img src="https://imtiaz.com.pk/wp-content/uploads/2021/02/2-scaled.jpg" class="img-4">
+      <div class="team-text">
+        <p>
+          <a href="#"><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABy1JREFUaEPVmmWoblUQhp+rmBhgJ3YrBnYHtmK3InYi/rADuwMvtqjY3WJ3dyt2gV1gFwbPYa3LnLn7i33O+XMHLpy994qZtWbeeWe+O4pxXEaN4/ozUgZMBqwErAwsDMwLTAv4XvkF+Br4AHgTeAx4Avh1uAc4HAOcuw6wE7AhMHFLZf4AbgcuA+4D/ms5f2D4UA3YAjgSWGQomzbMeR04Fri57XptDZgHOB9Yo+1GfY5/ANi7uFpfU9oYsB1wQfDrvMGHxRWeBN4BPgV+LoMmB2YD5i+xsjYwZwcNnbMHcG0/FvRjgGNOAA5tWPAf4HrgHOCZfjYsY1xzOWBfYEtg/Ia57qmbdo2NXgb4/Txgz4YNDLz9gPdaKN40dD7gbGDNho+66z7djOhlwEnAIWnh34rilwxT8Tx9d+AsYJL04fhyE43bdTNAn78qzRLL1wNebljNtZYANip+PiMwSxn3GfBlwX6h86UOxi8J3F1ySByyDXBd05xOBog2KlkTkXO/KYnq3bSQawirx5UE1s/F6HZHADc1uIcuZZIzEVb5qRyOQDFIOhnwYIJK3cZMm09+LuBqYJl+tG4Y8yzgTX+UvnkTjyd3uh8QvXoa4GnekMbtCmSfX7EknumGqHyd9kO5wYfTOsbEhendpsCt8V2+AZ9fSxnW5LJWWmi1gvkTpPd/lQ1uA14B9H3FWKjxsQkwYcM8T/fR9P6eQlfqa3VbPLpdNmDdEkR1gji/YIJK3eY5YOq0mf58EPBxjxsxgZ0GeJpRvgOWTvMXAN5IeUId760TswG6ji5URf/ePjw73oQVfV4jDwbOaOlKBwCnAOOFea69QgpsM/LWYYxoJCoNSDRAxPk2scrlU4bdqgHOVKSt8nX/A4FTk+GbJ1KnQdKTKr8D0wACyyADsvsIWcJpTeUaK8eR61fRbeKN1TUNwJ2BhcpAa4BrSlD+mRSWgUZ3cg/dNu6rLnOEecaLqDTIgJOLK9RxUgjTeBWh7YXwbMC6UcTmmUryM8ibxCBcH/g8fFSxt4GJwjsDXhCoIomU4FWRIRyWDbgT2CAM2jYxQhOVyaeKJC76pr78ELBqB+Xr60dKjokkLceetcFRYZ3MCu4oGX/QDZhho3sIV6+GRYS4VboYKOGTfPUjnuZFXRTUyNXTjUT6oZuJUIMMEMYiNPq3SabK+8Dc4VljfVdFaBUGq9wF7FIeLk63awaWTleRPqhUFQ/T2qGKQSvAVFHXAaoRUcjgignGv/8Okyw0IjeySLFYr5K/S+a+Kh/9+4s0dorw7Lq1+PG167p+FePDGrqKug7U4N0McJKB2knBbICEK246Q+lEON/gjoGrstEA//4x7OVaU7Y14HtgqjDJa/NdlRwjXnssZnSLmOAEhYoc8ihhukp2Id1FJKoyxsfLi75cKCuYoczAigiTUcrqbHRQotufuwHGRZWMMkMK4l4wKrRZo1bJMKrLebKL9TBCqi457AajxwBHh3WkM1eG50YYzeWjkGiLo4o3EqHMADeR2W2rMjNwRYLAaI95YodSndX3kjvdJwJIhvCcyE4EDneBGMR22aSvVSwyhM2Y0t1I368iDZC7RHFN6wc7dja+nC+VuLTUFLnLIL/fOCyQ/d/11GX2MKaRSjSROYnU02Giyt6YFJaQnd7DbTp9lsVKYaLkosXCyRKziiTOHDAWmXOAfm2fpooEzACr4mlo0LLh3b+FQ7U1wtpBt4102rVVON6S9FkWXEV6LYAMSK4HshvJ9WWUsZCXfD1fKG08uVtKQTNW4Z1OWLe0oIlu4xCz61LAJ2G8MWbfNDa+1NGeVKMBGmSgGkRVmkpK4VQ621RS2jaxpLQBYEnpac5aSkqV9l/TPJHJtnsUgz5yIrmZYDLmhpq6EpuVdkdcKJMvv41UUW+y1G1zUb9X6QpGPaynPZwx0qmt4unGVp9VkD9evJhOSHey7IzELA3p+vhUKVmj2zhBUuhtxN8crINjNm90obqbfqoLRG4jG7Q31NTYEjlsxkaI7aa5UCmOGzdZpBX2hGJjS56k6+T+UdcfOCycRaEoGmFFFSuz+N3Y0cc1VAaq7+uvxoJsVMWMkVhnxPlyKRlBVN7vuliG7643UBe1sTqQ8YJIa/dvaDq1cZ2msfr8mQ0/VeXqbNDcXt1pv58LuHgWOY0ELrLIoRghVNpej2hT13Fvf0PoKL0McKJjrIfzTfjNPGE960YmoX5/qHNNs7zK2dWIyawq2/Xk66B+DKhjLeCtY2Ngx5OxIyd6mfa9laafmKxjjQ+5TOQ2cR2LGblUo8/nq2hjgHNtK9puyb3SobhO0xyh0lbOWGjTaYO2BtR1TCi2PRYdIc1FJfm/CNVKhmpAjQ1dYcfSo8k/DfVSxORoVr28uF6/8dMKhXopUb9PWqiFfSPJny2X6Rv+q4E19Fsly9rvHKDEw5Hh3MBw9h2xueO8Af8DSrOEQH+5rtIAAAAASUVORK5CYII="></a>
+        </p><br>
+        <h3 class="mission">Our Mission</h3><br><br>
+        <p>We will make our unmatched services available to all major cities of Pakistan and beyond. We will strive for
+          continuous improvement in our processes, services and offerings by using the most advanced tools and
+          technology wherever possible to retain customers for life.</p>
+      </div>
+    </div>
+
+    <div class="single-team">
+      <img src="https://imtiaz.com.pk/wp-content/uploads/2021/02/3-scaled.jpg " class="img-4">
+      <div class="team-text">
+        <p>
+          <a href="#"><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA5BJREFUWEfd2FkIplMYB/DfMGG4MFlqxnpjLJGYEAnFBdlCylpcSJZc2CMUGsvYbiwXIi6s2ZdwIcLNWJJMGMq+RopkN6O/zqfj833vd953cuN/9XXO8zzn/z7n2c43xzCsjX1xOHbCptgI3+ALvIJH8Rx+6XPEnD7CWAPH42osaND9DJfhdvzeIK8PoS3wCHZuMTwm8zKOQAh2opVQSDyJhWPWPi3rH+JbbIytcWC5wlr887L+RhejFkIh8So2qQy9jbPxNFZNOGBNHIvLsWW1/wl2w5fTSM0ilJh5AXtWBu7BifgV62MPzMMT+G3soOzfhYOq9Rexz5QPmRlDx+DuytgDOApr4UqcimRccBpumfDlcwvZ/au92Lh/kpe6PJS9FVhUFD/CjiWNnylfma1c2Ts4Dq9PuYr5yDWPMvM9bDPJS12EctfLqgNOxq24FJdgZfHSUnw/K3twypgHd8Fr43pdhBKQFxWFH7FhqSVfYQPcgLMaiIxE1sPXJd6yFvv5sH+gi9BjOKRIP1VSdge8Wdbi8nd7EIpo7BxQdFLTUumbCaX8x63BjTgD22N5+dLEQ66tD24qwR+d2E9YNBNKoMYLQTLqwvI7KZtry35fXIELilISZts+hF6q6k+COUG9uoidk4qR2N+rD6F7S82JTir1rqvLpmTV4mLnPhzdh1CdpomVzZF+NBSbIbUs1T84HTf3IZQe9AF/V/PrcM5QNrgeZxb9FNOt8H4fQpF9GIcVpQxa6VvTqnEX15SLZNU6RehxHDpJYVZzzdgRQ+neQTIrsfRDD0+lIMbGdkUn1797WfuXmVmEopCJ7+JKM8GeptuKO3BCJbyk6gCDCKVbP4u9K+2MH3c2MAqREBoho8x+XeNsi4diLFU5sTPq1ulJmQK+6yCVWShdPVNkkOE/IZCiOhWthGLgYCQYR7gG53XYzhRwbrWfvpX+1Yk+hGIoT5tRdiTrUgYyOY4jA9y11fA2sZFOYtaXUHpbmmviqhV/lMHurRaFvoRi86FJY0PHYQ/iyBYykRlCKPNMPWfPOiuvj7xOmjCEUJPhoUL/C0J5ONbpP8sZGYNTg5owxEOZAvJ0bkXkP24VHkIofzpkrmnFf05o3fLHwujF2kXsp/Jk+rmV/RAPxfZVOL/hkPpx0CA+rA7FcLyTV2eeRdOQ2SnNtNk7QwvjiEBi47byxq9bSf4pe768LvrE2l92/wQG3qMlcgBDIgAAAABJRU5ErkJggg=="></a>
+        </p><br>
+        <h3>Our Philosophy</h3><br><br>
+        <p>To put all our efforts in providing best value to all our partners, stake holders, customers and society at
+          large.</p>
+      </div>
+    </div>
+
+    <div class="single-team">
+      <img src="https://imtiaz.com.pk/wp-content/uploads/2021/02/4-scaled.jpg " class="img-4">
+      <div class="team-text">
+        <p><br>
+          <a href="#"><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABnBJREFUaEPdmXWoZVUUh7+xFTswwO5W7O5BxO7ERsQuxMDEwMKxFVvEFrEbO9ARu7DFrrE7+B57P9acd/a55913h3Hm98/MPXvttdfae/UbxjiOYeO4/Iz3CiwB7ARMPZZe6gfgauCV0vlNLzAPMBKYdiwJn48dBSwDvFcnR0mBiYHHgBXHsvD5eC9yFeD3qjwlBc4F9g3EXwE/FpSZsWJinwO/FGinAGYJa5rI1wXaqYCZwtp5wH5tFNgYuA36HfxjYGngm5qDJgHeADQ38R0wb/q3Tq5pgHeBGdLih8CCdTcLTJdMeO7AaEvglsi4+gIe7nN5kPgTWBN4qnBLBwBnh7XDgDM6mJ00pwUaeZxT2LM88DjgRQmtYFng7UwfFZgUeDI5TF4/BDirwHxK4B1g5rT+KTB/g/lkNpMlAWZPHzRPL65kosoQL+Wl5Ju/uT8qULX7u4CNgH8LChwLHBfW9gQu7XD7eVnaSwKtvE4o7FXGW4FNw7qy7h8V0LZuCgRNdi+Zjqst5/zgky4K/NVSgQlTbF840f+UXuHLwv46f9geuE7tBmv3nnEmcHA4bOvKBbTRYyvgxkCoqWouJdT6gwo8Pwi7l7m2641ry0KnX67B1EoCefZz4WxtegHA1y/BS/PyMkbKJNp4J7t342XAboHJcOCBNldeQ+Pe+8J3ee/RwGuAP0QFOtm9fI3ZrwITpUMeTWG2S/n7tj0IrJMY/A1Yf73ewHA0f8gKdIr3mZ9JZPPAfCXgmaFIn8zv2RARPcOg0oR+f8gKaH/G8U4wK+bQ622ZSXuBOQEjk9Ck32/BdDb9sOoDLfb9v0jGKwW0Q9N0CRMAu4an/gy4o0fvYcafNTjyFcA/DbyXBFZwPb7A98DawAsNG6MT/wHMBajIUGAt9UHIK52ceHHgEWD6qgL+trBaHXizIJHe70tlnAwcNRTpAXkcEXisDDxd4Dlfqk77ewpfQDPYMGz4CFi1ISNaWhs+xbeAEcRaphtY0RrJ+m4zCa4CdbACeAKYIyzeqQKTA3dXEpJl8mqA3VUVWwA3h49N9Xwnpar9hLytPKuwMzNp5uLPdS9yeI7ptm8PpaSSN7+clLLLitCZ3wJ8TqH92ge0rUQzL+O+fCwmhbFfPuaXCCvehyv12ovAWsCo2A/Y5qmlZXGGWXa9GhOxX7Ymz+imGnXPDYGHPM+vCK913Jv8Mi9ZSGodfaV3taU0u9nC5R5XGmsVfSROBGzO9ZXc21pV6uCDgY6apx76krb9c2DgZMTefIPwzTMV3n/7UDeVUHiVUJkMGVm/RzM5CTgy0MhYJ2sDaR3bZMjr6PBb87oW2CZ888bd198PlxTwu2akOeUb9psTsl1C+V2N3yq5WRvp081ukmh9WWusnE+81IsB284Mh1vavLY/GpomczYpOrYOntHfi6YPl6fs7E+LMBV3zNIEmxZpDAZCHruHDacDh4bfmpV9Q+1kpNNwV60Nsbn7ku8xwInpgIVS7Z75XATs3UEBafZKNCptZn0t/Zb38WG/2d4y4/4Sz04KuE8GpnedKiOOW+4B1k8LluWWF18UDjSem7iMLsK92Un3AZy+ZRhO9YHRBllVvm0UcI8TgGvCs3tz2qgt4LqVltJRS7zFeKZrjlAy3KuZ7ghcVeGvWVnUNaKtAjLRNC6o3NB2aRphAej4UVhPWV78WjlZMzTp5UGYiXIpwFGmmT23qW47qDLxKyoxGAVkYtg05GVoo0YTTcMolaGNx8GV3/2m/Wf4dwe7QAcJ0cc845RON5/XB6uA+04FDg8HOIk20WkCeVxorLZuyTW95+iouZb5BNg2+YAFXcYI4MC2wkvXjQLuuTBEEvnYS+iQCpXhy9yefvh/80SGr6XSuQr1+5VpXFMaZdbq1Y0CMjKGmymjwNp8ji7SmGnXSKeaFO0zMqq01wM7dOjCeqqAzAyrlr6xl6geYq1jOLRWKsEYryMP+OtLG1Pq9gUy77peIp5rtekZVp516KvpK0VcG7n7aYaqgIys143l/uGhilz8xRCZaZzJOpHzz0xdoxcKeLjjdu18kZaSGKX0iVLGbsmmuyhUYm75bTkd/6ZVRzugpm8tbQ1hr14gs7Y9NPrEXiIea03vzdtK9gS9VkChFktzm9hL+L1Y0w9FkzGhgPLYXtqK5l7CbG208Y+IPcWYUkAhTWJmXDPrzsnJeyq8zP4DE6BM5/sfbZAAAAAASUVORK5CYII="></a>
+        </p>
+        <h3>Value Statement</h3><br><br><br>
+        <p>We Choose For Others What We Choose For Ourselves.</p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <section class="section section-work-data">
+    <h1 class="text-center fw-bold display-2 swiper-h1 mb-3">Our Potential</h1><br>
+    <div class="container-5 ">
+      <div>
+        <h2 class="counter-numbers counter" data-number="68">0+</h2>
+        <p>Years of Legacy</p>
+
+      </div>
+      <div>
+        <h2 class="counter-numbers counter" data-number="27">0+</h2>
+        <p>Stores</p>
+
+      </div>
+
+      <div>
+        <h2 class="counter-numbers counter" data-number="10000">0+</h2>
+        <p>Showcasing Brands</p>
+
+      </div>
+      <div>
+        <h2 class="counter-numbers counter" data-number="14000">0+</h2>
+        <p>Employees</p>
+
+      </div>
+
+      <div>
+        <h2 class="counter-numbers counter" data-number="12">0+</h2>
+        <p>Cities</p>
+
+      </div>
+
+
+      <div>
+        <h2 class="counter-numbers counter" data-number="900000">0+</h2>
+        <p>Loyal Customers</p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="our-blog ">
+    <h1 class="text-center fw-bold display-2 swiper-h1 mb-3">From Our Latest Blog</h1><br><br><br><br><br>
+    <div class="row gy-3 my-3 ">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card card-1" style="width: 24rem; height: 520px">
+          <figure class="fig; height: 400px;">
+            <img src="images/imgs/bgg/WhatsApp-Image-2023-08-17-at-3.41.06-PM-768x423.jpeg" class="card-img-top"
+              alt="...">
+          </figure>
+          <div class="card-body">
+            <a href="#" class="card-link">News & Updates</a><br>
+            <h2 class="card-title">Together for a Better Future</h2><br>
+            <p class="card-text">In a remarkable stride towards social responsibility and community development, imtiaz
+              embarked on a collaboration...</p><br><br>
+            <p>August 17 2023</p><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card card-2" style="width: 24rem; height: 520px">
+          <figure class="fig; height: 400px">
+            <img src="images/imgs/bgg/Cricket-2.jpg" class="card-img-top " alt="...">
+          </figure>
+          <div class="card-body">
+            <a href="#" class="card-link">News & Updates</a><br>
+            <h2 class="card-title">Imtiaz Cricket League - A Night of Champions</h2><br>
+            <p class="card-text">The management of Imtiaz has always been on organzing recreational activities that
+              don't only...</p><br><br>
+            <p>November 27 2022</p><br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card card-3" style="width: 24rem; height: 530px">
+          <figure class="fig; height: 400px">
+            <img src="images/imgs/bgg/Choti-5.png" class="card-img-top" alt="...">
+          </figure>
+          <div class="card-body">
+            <a href="#" class="card-link">News & Updates</a><br>
+            <h2 class="card-title">Coti Eid Bari Bachat-Imtiaz Adding Colors to Your Eid!</h2><br>
+            <p class="card-text">As the day kicks off with Eid prayers it takes a sweet start with a...</p><br><br>
+            <p>April 28 2022</p><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card card-4" style="width: 24rem; height: 595px">
+          <figure class="fig; height: 400px">
+            <img src="images/imgs/bgg/blog-4.jpg" class="card-img-top" alt="...">
+          </figure>
+          <div class="card-body">
+            <a href="#" class="card-link">News & Updates</a><br>
+            <h2 class="card-title">Shadi, Biyah aur Bachat-Stop to Shop the Best at Great Prices!</h2><br>
+            <p class="card-text">Weddings in General are quite an occupying affair that is cherised and celebrated
+              holistically.Pakistani...</p><br><br>
+            <p>October 25 2022</p><br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card card-5" style="width: 24rem; height: 535px">
+          <figure class="fig; height: 400px">
+            <img src="images/imgs/bgg/img-6.jpg" class="card-img-top" alt="...">
+          </figure>
+          <div class="card-body">
+            <a href="#" class="card-link">News & Updates</a><br>
+            <h2 class="card-title">Imtiaz Lawn Spree - The Ultimate Look Book for the Season</h2><br>
+            <p class="card-text">Simple prints and vibrant colors itself speak out loud about your personality.As much
+              as...</p><br><br>
+            <p>February 28 2022</p><br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card card-6" style="width: 24rem; height: 608px">
+          <figure class="fig; height: 400px">
+            <img src="images/imgs/bgg/Womens-7.jpg" class="card-img-top" alt="...">
+          </figure>
+          <div class="card-body">
+            <a href="#" class="card-link">News & Updates</a><br>
+            <h2 class="card-title">International Women's Day- Time to recognize and acknowledge the countless
+              contributions of women!</h2><br>
+            <p class="card-text">A women is the most beautiful and unique creation of God with a heart full...</p>
+            <br><br>
+            <p>March 10 2022</p><br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card card-7" style="width: 24rem; height: 520px">
+          <figure class="fig; height: 400px">
+            <img src="images/imgs/bgg/imtiaz-8.jpg" class="card-img-top" alt="...">
+          </figure>
+          <div class="card-body">
+            <a href="#" class="card-link">News & Updates</a><br>
+            <h2 class="card-title">Introducing Buraaq - by Imtiaz</h2><br>
+            <p class="card-text">Looking for something supremely sophisticated yet comfortable this season? What solid
+              and subtle colors coupled...</p><br><br>
+            <p>May 26 2021</p><br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card card-8" style="width: 24rem; height: 520px">
+          <figure class="fig; height: 400px">
+            <img src="images/imgs/bgg/website-9.jpg" class="card-img-top" alt="...">
+          </figure>
+          <div class="card-body">
+            <a href="#" class="card-link">Gallery News & Updates</a><br>
+            <h2 class="card-title">The City of Sialkot and the Grand Lucky Draw!</h2><br>
+            <p class="card-text">Imtiaz Mega Sialkot is the biggest retail outlet in the entire Pakistan and therefore,
+              it...</p><br><br>
+            <p>June 28 2021</p><br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card card-9" style="width: 24rem; height: 595px">
+          <figure class="fig; height: 400px">
+            <img src="images/imgs/bgg/islamabad-10.jpg" class="card-img-top" alt="...">
+          </figure>
+          <div class="card-body">
+            <a href="#" class="card-link">News & Updates</a><br>
+            <h2 class="card-title">Highlights of Imtiaz Mega Gulberg Islamabad's Exciting Branch Opening</h2><br>
+            <p class="card-text">Highlights of Imtiaz Mega Gulberg Islamabad's Exciting OpeningCeremony Imtiaz's second
+              branch in islamabad recently...</p><br><br>
+            <p>November 21 2022</p><br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card card-10" style="width: 24rem; height: 500px">
+          <figure class="fig; height: 400px">
+            <img src="images/imgs/bgg/Intro-design-11.jpg" class="card-img-top" alt="...">
+          </figure>
+          <div class="card-body">
+            <a href="#" class="card-link">News & Updates</a><br>
+            <h2 class="card-title">Covid-19 & GROCERY SHOPPING</h2><br>
+            <p class="card-text">Soon after Getting hit by COVID-19, not only lifestyle but the way we used to...</p>
+            <br><br>
+            <p>May 31 2021</p><br><br>
+          </div>
+        </div>
+      </div>
+      <button class="button-two">READ MORE</button>
+    </div>
+  </div>
+
+  <div class="event-gallery">
+    <div class="fw-bold display-2">
+      <h1 class="text-center fw-bold display-2 swiper-h1 mb-3">Event Gallery</h1>
+    </div>
+    <div class="event-gallery2">
+      <div class="card-gallery">
+        <div class="face face1">
+          <div class="content">
+            <h2>Gallery One</h2><br>
+            <p>Imtiaz Celebrating The <sub>75</sub> Years Of Independence</p><br><br>
+            <a href="#">VIEW GALLERY</a>
+          </div>
+        </div>
+        <div class="face face2">
+          <!-- <h2>01</h2> -->
+        </div>
+      </div>
+
+      <div class="card-gallery">
+        <div class="face face1">
+          <div class="content">
+            <h2>Gallery Two</h2><br>
+            <p>Imtiaz Heatwave Relief Camps - CSR</p><br><br>
+            <a href="#">VIEW GALLERY</a>
+          </div>
+        </div>
+        <div class="face face2 face3">
+          <!-- <h2>02</h2> -->
+        </div>
+      </div>
+
+      <div class="card-gallery">
+        <div class="face face1">
+          <div class="content">
+            <h2>Gallery Three</h2><br>
+            <p>Imtiaz Mega Gujrat - Grand Lucky Draw</p><br><br>
+            <a href="#">VIEW GALLERY</a>
+          </div>
+        </div>
+        <div class="face face2 face4">
+          <!-- <h2>03</h2> -->
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="career">
+    <!-- <img src="https://imtiaz.com.pk/wp-content/uploads/2020/03/eberhard-grossgasteiger-5P91SF0zNsI-unsplash-1.jpg"> -->
+    <h1 class="h11 text-center fw-bold display-2 swiper-h1 mb-3">Imtiaz Careers</h1>
+    <div class="career-items">
+      <p>As a part of the retail industry, we need to move fast and work smart to get things done. Our corporate culture
+        is driven by individuals who possess a passion for growth; professionally and personally. If you can add value
+        to our team at Imtiaz, we’re ready to invest in your growth.
+        Join our synergy driven team and embrace your passion for a suitable career. Undertake a career of your choice
+        by sending an online application by registering with us.
+      </p>
+      <div class="career-img1">
+        <img src="images/imgs/bgg/HR-15.jpg" class="career-img">
+      </div>
+    </div>
+    <button class="button-three">APPLY HERE</button>
+  </div>
+
+  <div class="main-form">
+    <div class="title text-center fw-bold display-2 swiper-h1 mb-3">Contact Us</div>
+    <form action="#" class="form">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Your Name</span>
+          <input type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Your Password</span>
+          <input type="text" placeholder="Enter your password" required><br><br>
+        </div>
+        <div class="input-box">
+          <span class="details">Your Email</span>
+          <input type="text" placeholder="Enter your email" required><br><br>
+        </div>
+        <div class="input-box">
+          <span class="details">Phone Number</span>
+          <input type="text" placeholder="Enter your number" required><br><br>
+        </div>
+        <div class="button-four">
+          <input type="submit" value="Register">
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <div class="container-6">
+    <div class="swiper-h1">
+      <h1 class="text-center fw-bold display-2 swiper-h1 mb-3">Brands We Carry</h1><br /><br /><br /><br />
+    </div>
+    <div class="slider-wrapper">
+      <div class="icons">
+        <!-- <img id="prev-slide"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAzxJREFUWEfF10mrXUUUBeAvsSGCERxoguJEUcGhDmyiiMYGdaBgB/oPbLA3NmAGQY092KC/wA5FBQfGHo1xoANBwQ4zsCUOFFGiolFZsk84nHfvu3Xue5CCx7ucqtp71d671l61wh4eK0b43wvrcD5OwuE4sPb/jO14Dy9hG3a12G4BsB+uwfU4qMUofsQDeAS/L7ZnFoBL8CAOLSOf40W8hu/wTX0/rNaciQtwdH3PfIA/Nw3ENAD5vhF3IL8/xAa82RiBpOjeStm/9fs2/DPcPwnASjyFnP6vCv8TiKExI7avwEPYB8/gsiGISQDuxi34CRfi7TFeJ6w9Dc9Xwd6F2/trhgBy6iDNyc9aBuedr4DYgr1xcQH6f64PINX+ZRVTQvf4yJOvwcH4eMq+q+pWpDCPwh9DALciIfoAx4/M+ZF4C2vrADsmgMhhY/u4KugU6e4IhGR+qHt+ehlrDUDnPFf1DZy9CAmdUVc4ALN+V5eCUyvfn+KYVs/oO38X5+K3Gfs/K544BVs7ACGb67AZSUXLmMd57Cb0N+H+/O8AvI8TkBAljLPGvM5jN2z5avWLdR2AcHd4PhT6xQzvS3Ee0/GRNKQO1nYA/sS+WD0jh6sKYLg/BHUeds4K12B+f/yK+Fw1BHBATU6zuRwA4uOXIYB5U7AV5zRUfv9AE1MQAXFiFcjrDSFdSh2E4kPLES8ndynIlbgB91QjasAwFwfE7n24sa7jhg5ASOGd6gXh6dYxTyQiauIj8m5bByBU/H01k/UjhEeAzkvFh0Qb9LvhzZWCj6phLFAvi4RlbDNKCqIZF7TjhCd3PK3zsdY81LoQWVryJ1P2XY2H8XWR0YJ2nH0X4Vn8XV0tLXY5RjrsKyVIorJe6IxOkmR3IgIyWj+LlwoizqOK84bYVEJ396GmidIncWlJs8jqpGOsKI24vbJkfaTY07i8RZR2tdGX5clr2vTLjflIVw2nHFvA04KbZXnfR1IQWZ3CzIhm7B4m0Xbf1vfM5y+O8zDJrchIwV3bz/nwALNeRlmfBpQKDlOmyltGWm3Y9dFOfE7b1AKg25uc5sXTPU6PGDxOv+o9TiNwmnhkDICWk49e8x9Wu8QhnGA/6wAAAABJRU5ErkJggg==" class="arrow-left" > -->
+        <img id="prev-slide"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAN1JREFUWEftlj0KAjEQhb93Cb2DWKmdNuqZtdMbrJWFN1A8gd3IQhZEFsnPsAuS1Enel/cymYiRh0bWpwJUB/7HATObAkfgJWkdW10uDgTxMzADGkmrwQDMbAKcgDlwA3aS7oMAlIq3kNkReIhnA3iJZwH0iG8lPWIz/56XFIG3eLIDZtYAC+AK7CU9c0/erUt1YHSAoprvcyvJgXYDzwpIvgPdCTwhkh3whsgG8IqjCMADohggQLR/ga4dXyQtY98HF4APiEP4kGwGB4gVLOoFuSK/1rlFkAtXAaoDb+idaCHcCVr8AAAAAElFTkSuQmCC"
+          class="slide-button arrow-left">
+      </div>
+      <div class="image-list">
+        <img src="images/imgs/bgg/Nestle-Pakistan-1.png" class="image-item">
+        <img src="images/imgs/bgg/Nestle-Pakistan-1.png" class="image-item">
+        <img src="images/imgs/bgg/maybelline-5.png" class="image-item">
+        <img src="images/imgs/bgg/Nestle-Pakistan-1.png" class="image-item">
+        <img src="images/imgs/bgg/Nestle-Pakistan-1.png" class="image-item">
+        <img src="images/imgs/bgg/Ponam-4.png" class="image-item">
+        <img src="images/imgs/bgg/Nestle-Pakistan-1.png" class="image-item">
+        <img src="images/imgs/bgg/bakings-2.png" class="image-item">
+        <img src="images/imgs/bgg/Sabihas-11.png" class="image-item">
+        <img src="images/imgs/bgg/loreal-8.png" class="image-item">
+        <img src="images/imgs/bgg/Homesense-13.png" class="image-item">
+        <img src="images/imgs/bgg/buraaq-10.png" class="image-item">
+        <img src="images/imgs/bgg/khilkariyan-7.png" class="image-item">
+        <img src="images/imgs/bgg/Uniliver-12.png" class="image-item">
+        <img src="images/imgs/bgg/brios-9.png" class="image-item">
+        <img src="images/imgs/bgg/Ponam-4.png" class="image-item">
+        <img src="images/imgs/bgg/pandg-6.png" class="image-item">
+      </div>
+      <div class="icons">
+        <!-- <img id="next-slide"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAz9JREFUWEfF19mvXlMYBvBfTWkFiQvVEjcEiXCjF1XVoKZLEkrCf2CIjlok7UWj5koM4S8whaBI1ByhLrhwIakhXJiHhAiJipbmad598mWfb59v73OadCUn58tea73v887PmucQr3kD9B+O5bgS5+NUHF/3f8fX+AAvYRf29ZHdB8AC3Iq1OKGPUPyCB/EI/p7pziQA12I7Ti4hn+NFvIHv8W19P6XOXIarcGZ9z36AP9cFogtAvm/BZuT3x9iIt3t6ICG6r0L2f/2+A/+1748DcBieQqz/t9z/BCJoyIrsG/EQjsQzuL4NYhyAu7EJv+FqvDtE65izF+P5SthtuHP0TBtArA7SWH75QVDe6AqInTgCqwrQgb1RAMn2LyuZ4rrHOyw/Bz9Xpg9xzs1VFUnMM7CnDeB2xEUfYWlHzBdX5v+EWBXAfVeMjewlldBJ0ikPpMn8WHW+Eu90SI0LX8MlVYZDQVxaJRwPprT3NSG4sOK9G2dNMOlo7CgQ8UQA517f9Vn1iRV4vwGQZrMG9yChmLTmAiKu34AH8r8B8CHOQ1z01iTttT9bEOmWr9e8WN4ASO9On08L/aIngBwLiJcrDH3DER0JQ/JgUQPgHxyFY/HXAAANiFdxUVXIVIl1yDkGfyI657cBHFebQzDEC0MARMcfbQCHPAQhEMuQBHmzp/mziX9Ep8WnLYe8XNCEICWxDvfWIJqEYbbKI/d+rK8RvbEBkKbwXrXWJNFMay7KIzekJjpC73Y1ANKKf8DC6nBdxONgtuKTwg1Gp+FtFYJPamBMYy+pW3yHuQ6jhCCccdo4jnvC7zI6H+uIw9nVRH6dlCit/VvwML6phjdtHOf8NXgWe3HFDFNxoO4DAytTNCEMy3qhETCOkt2FEMhw/RzuGs19QUR5WHHeEFuL6E7d7SKlT+K6omah1QnHUFIacntT0fpY/jRu6ENKm9wYpeWf1ph+pafZmarpKecW8Izg3rR8VEdCEFqdxMwKBWseJuF2qYis7OcvivMwOb2+J+FWj8a8bcCkl1HOz0cyOJ3yxJ4eyKhNd320IZ9d9/oAaO4mpnnxNI/T01qP069GHqchOOP6yDQcQwD0NH7Ysf1KqsghOKUqRgAAAABJRU5ErkJggg==" class="arrow-right"> -->
+        <button><img id="next-slide"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAL9JREFUWEft1jEKwkAUhOF/Sg+gp9DSA0Q772xlJ5YW3iDiJZ4spBTZ9/bBEtjUC/NlwpAVnR91zmcARgPrasDMbsAGuEj6ZCzI1YCZ3YEj8ATOGQgvYAtcgQPwAk6S5pYmXIASZGapCDcgGxECZCLCgCxEEyAD0QxYELtlHXvgIalMtepZP+DHLCdJ76rXh7b7QGt4QYY/QUZ4GJAVHgJkhrsB2eERQPffcd8LSe22PefCM/SE/Ds7AKOB7g18Af/oaCHu6Ln+AAAAAElFTkSuQmCC"
+            class=" slide-button arrow-right"></button>
+      </div>
+    </div>
+    <div class="slider-scrollbar">
+      <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="row-container ">
+      <div class="footer-one ">
+        <a class="navbar-brand" href="#">
+          <img class=" fff starting-logo default-logo" alt="Imtiaz"
+            src="https://imtiaz.com.pk/wp-content/uploads/2021/02/imtiaz-3.png"
+            srcset="https://imtiaz.com.pk/wp-content/uploads/2021/02/imtiaz-3.png 1x, https://imtiaz.com.pk/wp-content/uploads/2021/02/imtiazwhite-3.png 2x">
+        </a>
+      </div>
+      <div class="footer-one ">
+        <h5 class="pb-2">ABOUT</h5>
+        <p class="footer-para">Since 1955, Imtiaz has been providing its customers with a unique shopping experience,
+          especially in Karachi; one of the biggest metropolitan cities of Pakistan. Imtiaz is one of a kind, modern
+          retail departmental store offering a wide range of good quality products at economical rates for its
+          customers.</p>
+      </div>
+      <div class="footer-one ">
+        <h5 class="pb-2">Contact Us</h5>
+        <div>
+          <p><sub>7</sub>th Floor, Prestige Trade Center, Main Shaheed-e-Millat Road, Karachi, Pakistan.</p>
+        </div>
+        <div>
+          <p>021-111-468-429 (IMT-IAZ)</p>
+        </div>
+        <div>
+          <p>hello@imtiaz.com.pk</p>
+        </div>
+      </div>
+      <div class="footer-one ">
+        <h5 class="pb-2">Featured</h5>
+        <ul class="pom">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Potential</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Loyalty Program</a></li>
+          <li><a href="#">Gift Card</a></li>
+          <li><a href="#">Home Delivery</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Return Policies</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class=" last-cont copyright mt-1">
+      <div class="row container mx-autp">
+        <div class=" copyright col-lg-4 col-md-6 col-12 ml-auto mb-6 pl-4">
+          <p>&#169 2023 Imtiaz.</p>
+        </div>
+        <div class=" menu col-lg-4 col-md-6 col-12 pl-4">
+          <li style="--i:1;--clr:#ff0000;">
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+          </li>
+          <li style="--i:2;--clr:#1877f2;">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </li>
+          <li style="--i:3;--clr:#ea4d89;">
+            <a href="#"><ion-icon name="logo-dribbble"></ion-icon></a>
+          </li>
+          <li style="--i:4;--clr:#25d366;">
+            <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+          </li>
+          <div class="toggle">
+            <ion-icon name="share-social"></ion-icon>
+            <ion-icon name="close-outline"></ion-icon>
+          </div>
+        </div>
+
+        <div class="bar menu col-lg-4 col-md-6 col-12 pl-4">
+          <li style="--i:1;--clr:#ff0000;">
+            <a href="#"><ion-icon name="logo-snapchat"></ion-icon>
+            </a>
+          </li>
+          <li style="--i:2;--clr:#1877f2;">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </li>
+          <li style="--i:3;--clr:#ea4d89;">
+            <a href="#"><ion-icon name="logo-dribbble"></ion-icon></a>
+          </li>
+          <li style="--i:4;--clr:#25d366;">
+            <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+          </li>
+          <div class="toggle rescue">
+            <ion-icon name="share-social"></ion-icon>
+            <ion-icon name="close-outline"></ion-icon>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    //   navbar code
+    const navEl = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= 65) {
+        navEl.classList.add('navbar-scrolled');
+      } else if (window.scrollY < 65) {
+        navEl.classList.remove('navbar-scrolled');
+      }
+    });
+
+    openmodel()
+    {
+      const modelDiv = document.getElementById('myModal');
+      if (modelDiv != null) {
+        modelDiv.style.display = 'block';
+      }
+    };
+
+    closemodel()
+    {
+      const modelDiv = document.getElementById('myModal');
+      if (modelDiv != null) {
+        modelDiv.style.display = 'none';
+      }
+    };
+
+
+  </script>
+
+  <script>
+    //    counter animated number
+    const counterNum = document.querySelectorAll(".counter-numbers");
+    const speed = 200;
+    const minIncrement = 1;
+
+    const updateNumber = (curElem) => {
+      const targetNumber = parseInt(curElem.dataset.number);
+      const initialNum = parseInt(curElem.innerText);
+      const incrementNumber = Math.trunc(minIncrement, Math.trunc(targetNumber / speed));
+
+      if (initialNum < targetNumber) {
+        curElem.innerText = `${initialNum + incrementNumber}+`;
+        setTimeout(() => updateNumber(curElem), 10);
+      }
+
+    };
+    counterNum.forEach((curElem) => {
+      updateNumber(curElem);
+    });
+
+  </script>
+
+  <script>
+    //    brand carry section code
+
+    const initSlider = () => {
+      const imageList = document.querySelector(".slider-wrapper .image-list");
+      const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+      const sliderScrollbar = document.querySelector(".container-6 .slider-scrollbar");
+      const ScrollbarThumb = document.querySelector(".scrollbar-thumb");
+      const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+      // Handle scrollbar thumb drag
+      ScrollbarThumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPostion = ScrollbarThumb.offsetWidth;
+
+        // update thumb position on mouse move
+        const handleMouseMove = (e) => {
+          const deltax = e.clientX - startX;
+          const newThumbPosition = thumbPostion + deltax;
+          const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - ScrollbarThumb.offsetWidth;
+
+          const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+          const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+          ScrollbarThumb.style.left = `${boundedPosition}px`;
+          imageList.scrollLeft = scrollPosition;
+        }
+
+        // remove event listeners on mouse up 
+        const handleMouseUp = () => {
+          document.removeEventListener("mousemove", handleMouseMove);
+          document.removeEventListener("mouseup", handleMouseUp);
+        }
+
+        // Add event listeners for drag interaction
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+
+      });
+
+      // Slide images according to the slide button clicks
+      slideButtons.forEach(icons => {
+        icons.addEventListener("click", () => {
+          const direction = icons.id === "prev-slide" ? -1 : 1;
+          const scrollAmount = imageList.clientWidth * direction;
+          imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+      });
+
+      const handleSliderButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "block";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "block";
+      }
+
+      // Update scrollbar thumb position based on imagr scroll
+      const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - ScrollbarThumb.offsetWidth);
+        ScrollbarThumb.style.left = `${thumbPosition}px`;
+      }
+
+
+      imageList.addEventListener("scroll", () => {
+        handleSliderButtons();
+        updateScrollThumbPosition();
+      });
+    }
+
+    window.addEventListener("load", initSlider);
+  </script>
+
+  <script>
+    //  footer icon
+    let toggle = document.querySelector('.toggle');
+    let menu = document.querySelector('.menu');
+    toggle.onclick = function () {
+      menu.classList.toggle('active');
+    }
+  </script>
+
+ <script>
+  //  footer icon
+  let rescue = document.querySelector('.rescue');
+  let bar = document.querySelector('.bar');
+  rescue.onclick = function () {
+    bar.classList.rescue('active');
+  }
+ </script>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
