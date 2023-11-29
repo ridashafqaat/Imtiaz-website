@@ -125,7 +125,7 @@
 }
 .container-1{
     position: absolute;
-    top: 800px;
+    top: 700px !important;
     text-align: center;
     left: 150px;
     height: 175px;
@@ -157,7 +157,7 @@
     width: 80%;
     height: 60%;
     position: absolute;
-    top: 1000px;
+    top: 900px !important;
     left: 150px;
     display: flex;
     gap: 30px;
@@ -264,7 +264,6 @@
     margin-top: 8px;
     font-family: serif;
 }
-
 
 .section-work-data{
     background-color: rgb(36, 209, 151);
@@ -404,6 +403,11 @@
     border: 1px solid black;
     height: 29px;
 }
+
+
+      /* Event gallery section */
+
+
 .event-gallery{
     width: 100%;
     height: 500px;
@@ -698,23 +702,30 @@ form .button-four input:hover{
 }
 
 
-/*   slider-container    section */
+/*   slider-container  section */
 
 .container-6 {
     height: 500px;
     width: 100%;
     /* max-width: 1200px; */
     position: absolute;
-    top: 1000vh ;
+    top: 6200px;
 }
 .slider-wrapper{
     width: 85%;
     /* background: #9b59b6; */
     position: absolute;
     left: 100px;
+    top: 100px;
 }
-.swiper-h1{
+.pao{
     color: #1e83ec;
+    width: 800px !important;
+    height:200px ;
+    text-align: center;
+    font-weight: 700;
+    font-size: 70px;
+
     cursor: pointer;
 }
 .slider-wrapper .arrow-left{
@@ -782,7 +793,7 @@ form .button-four input:hover{
     display: flex;
     align-items: center;
     position: absolute;
-    top: 86%;
+    top: 60%;
     width: 85%;
     left: 100px;
 
@@ -839,7 +850,7 @@ form .button-four input:hover{
 
 footer{
     position: absolute;
-    top: 1090vh;
+    top: 6600px;
     /* background: aqua; */
     height: 600px;
     width: 100%;
@@ -1000,6 +1011,52 @@ footer .menu{
 }
 
 
+
+/* @media (max-width: 2560px) {
+    .container-1 {
+        position:absolute;
+        top:868px;
+    }
+    .main-container-3{
+        position:absolute;
+        top:1080px;
+    }
+    .section-work-data{
+        position:absolute;
+        top:1800px;
+    }
+    .our-blog{
+        position:absolute;
+        top:2400px;
+    }
+    .event-gallery .fw-bold{
+        position:absolute;
+        top:170px;
+        width: 500px;
+        font-weight: 700;
+        font-size: 70px;
+    }
+    .event-gallery2{
+        position:absolute;
+        top:150px;
+    }
+    .career{
+        position:absolute;
+        top:5510px;
+    }
+    .main-form{
+        position:absolute;
+        top:6300px;
+    }
+    .container-6 .swiper-h1{
+        width: 500px;
+        font-weight: 700;
+        font-size: 70px;
+    }
+
+
+    
+} */
 
 
 
